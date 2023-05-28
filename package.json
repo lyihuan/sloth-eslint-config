@@ -1,0 +1,65 @@
+{
+  "name": "@slothfish/eslint-config",
+  "version": "0.0.0-development",
+  "description": "The ESLint config used by Project, following our style guide",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyihuan/sloth-eslint-config"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "sloth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lyihuan/sloth-eslint-config/issues"
+  },
+  "homepage": "https://github.com/lyihuan/sloth-eslint-config",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.5",
+    "semantic-release": "^17.0.7"
+  },
+  "peerDependencies": {
+    "eslint": ">=7",
+    "eslint-plugin-import": "~2.25.4",
+    "eslint-plugin-jest": "^26.1.0",
+    "eslint-plugin-jsx-a11y": "~6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "~6.0.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
+    "eslint-plugin-react": "~7.28.0",
+    "eslint-plugin-react-hooks": "~4.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint-config-react-app": "^7.0.1"
+  },
+  "engines": {
+    "node": ">=8.1.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "prettier": {
+    "arrowParens": "always"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
